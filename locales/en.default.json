@@ -1,0 +1,12 @@
+{
+  "general": {
+    "page_title": "LUXEVOGUE — Luxury Digital Experience",
+    "search": "Search the collection...",
+    "continue_shopping": "Continue Shopping"
+  },
+  "cart": {
+    "title": "Your Bag",
+    "empty": "Your bag is empty",
+    "checkout": "Proceed to Checkout"
+  }
+}

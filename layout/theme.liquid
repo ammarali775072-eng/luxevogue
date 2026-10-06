@@ -1,0 +1,68 @@
+<!doctype html>
+<html class="no-js dark" lang="{{ request.locale.iso_code }}">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="#08090D">
+    <link rel="canonical" href="{{ canonical_url }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Syne:wght@500;700;800&family=Cinzel:wght@600;700;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <title>
+      {{ page_title }}
+      {%- if current_tags %} &ndash; tagged "{{ current_tags | join: ', ' }}"{% endif -%}
+      {%- if current_page != 1 %} &ndash; Page {{ current_page }}{% endif -%}
+      {%- unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless -%}
+    </title>
+
+    {% if page_description %}
+      <meta name="description" content="{{ page_description | escape }}">
+    {% endif %}
+
+    {{ content_for_header }}
+
+    <style>
+      :root {
+        --bg-primary: #08090D;
+        --bg-secondary: #101118;
+        --bg-surface: #161821;
+        --text-primary: #F5F5F7;
+        --text-muted: #9698A3;
+        --gold: #D6B36A;
+        --gold-bright: #F3D58A;
+      }
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: #08090D;
+        color: #F5F5F7;
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        overflow-x: hidden;
+      }
+      #shopify-section-header, #shopify-section-footer {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body class="bg-[#08090D] text-[#F5F5F7] antialiased">
+    <!-- LUXEVOGUE React + Three.js Application Root -->
+    <div id="root">
+      {{ content_for_layout }}
+    </div>
+
+    <!-- Shopify Storefront Metadata Bridging -->
+    <script>
+      window.ShopifyTheme = {
+        shopName: {{ shop.name | json }},
+        currency: {{ shop.currency | json }},
+        moneyFormat: {{ shop.money_format | json }}
+      };
+    </script>
+
+    <!-- Built React Applet Script Bundle -->
+    <script type="module" src="{{ 'main.js' | asset_url }}"></script>
+  </body>
+</html>

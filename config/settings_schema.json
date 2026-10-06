@@ -1,0 +1,31 @@
+[
+  {
+    "name": "theme_info",
+    "theme_name": "LUXEVOGUE Luxury Atelier",
+    "theme_version": "1.0.0",
+    "theme_author": "LUXEVOGUE Atelier",
+    "theme_documentation_url": "https://luxevogue.com",
+    "theme_support_url": "https://luxevogue.com"
+  },
+  {
+    "name": "General Settings",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Brand Palette"
+      },
+      {
+        "type": "color",
+        "id": "gold_accent",
+        "label": "Gold Accent",
+        "default": "#D6B36A"
+      },
+      {
+        "type": "color",
+        "id": "bg_dark",
+        "label": "Obsidian Background",
+        "default": "#08090D"
+      }
+    ]
+  }
+]

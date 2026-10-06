@@ -1,0 +1,6 @@
+{
+  "name": "LUXEVOGUE — Luxury Fashion & Digital Experience",
+  "description": "A cinematic Awwwards-inspired luxury fashion and lifestyle ecommerce experience featuring real-time 3D storytelling, interactive objects, and editorial curation.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
